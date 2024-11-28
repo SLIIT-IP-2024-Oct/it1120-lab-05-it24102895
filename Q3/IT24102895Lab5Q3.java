@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class IT24102895Lab5Q3 {
     public static void main(String[] args) {
         
-        final double ROOM_CHARGE_PER_DAY = 48000.00;
-        final double DISCOUNT_10_PERCENT = 0.10;
-        final double DISCOUNT_20_PERCENT = 0.20;
+        final double chargesPerDay = 48000.00;
+        final double discount10 = 0.10;
+        final double discount20 = 0.20;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -31,16 +31,16 @@ public class IT24102895Lab5Q3 {
         int daysReserved = endDate - startDate;
 
         
-        double totalAmount = daysReserved * ROOM_CHARGE_PER_DAY;
+        double totalAmount = daysReserved * chargesPerDay;
 
         if (daysReserved >= 3 && daysReserved <= 4) {
-            totalAmount -= totalAmount * DISCOUNT_10_PERCENT; 
+            totalAmount -= totalAmount * discount10; 
         } else if (daysReserved >= 5) {
-            totalAmount -= totalAmount * DISCOUNT_20_PERCENT; 
+            totalAmount -= totalAmount *discount20; 
         }
 
         
-        System.out.println("Room Charge Per Day: Rs. " + ROOM_CHARGE_PER_DAY);
+        System.out.println("Room Charge Per Day: Rs. " + chargesPerDay);
         System.out.println("Number of Days Reserved: " + daysReserved);
         System.out.println("Total Amount to be Paid: Rs. " + totalAmount);
 
